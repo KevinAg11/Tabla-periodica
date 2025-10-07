@@ -1,0 +1,254 @@
+body{
+	font-family: 'Tahoma';
+	color: '#00ff00';
+}
+
+a{
+	font-size:120%;
+	text-decoration-line: none;
+}
+
+
+.table{
+	display: grid;
+    grid-template-columns: repeat(18, 110px);
+    grid-template-rows: repeat(10, 110px);
+    gap: 5px;
+	cursor: pointer;
+}
+
+.element{
+	background-color: rgb(94, 87, 100);
+	margin: 1px;
+    color: rgb(5, 5, 5);
+	border-radius: 8px;
+	text-align: center;
+    padding: 10px;
+    min-width: 105px;
+    min-height: 105px;
+    box-sizing: border-box;
+}
+
+.element:hover{
+    background-color: rgb(150, 150, 150);
+    transform: scale(1.2);
+}
+
+.middle{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+  gap: 2px;                       /* espacio entre columnas/filas */
+  font-size: 8px;
+  font-weight: bold;
+  justify-content: center;
+
+}
+
+.letraelemento{
+    font-size: 20px;
+    text-align: right;
+}
+
+.nometal { background-color: #ff8c40; }
+.gasnoble { background-color: #ff8cfd; }
+.metalesalcalinos { background-color: #9508fa; color: white;}
+.alcalinoterreos { background-color: #e6a459; }
+.metaloides { background-color: #f7901b; }
+.halogenos { background-color: #9d1291; color: white;}
+.otrosnometales { background-color: #04eeff; color: white;}
+.metales-transicion { background-color: #eadc3e; }
+.lantanidos { background-color: #bda5d9; }
+.actinidos { background-color: #86d0f2; }
+.bloquemetalp{background-color: green;}
+
+/* Ubicaciones específicas */
+.masa { top: 0rem; left: -9rem; }
+.masa::before { top: 10px; left: 90px; }
+
+.ionizacion { top: 26px; left: -16rem; }
+.ionizacion::before { top: 8px; right: -30px; width: 30px; }
+
+.electronegatividad { top: 45px; left: -10rem; }
+.electronegatividad::before { top: 10px; left: 110px; }
+
+.numero { top: 0,1rem; left: 14rem; }
+.numero::before { top: 10px; left: -40px; width: 40px; }
+
+.simbolo { top: 6rem; left: -7rem; }
+.simbolo::before { top: 10px; left: 100px; width: 70px; }
+
+.nombre { top: 8rem; left: -3rem; }
+.nombre::before { top: 10px; left: 50px; width: 50px; }
+
+.config-l { top: 13rem; left: 0rem; }
+.config-l::before { top: -25px; left: 30px; width: 1px; height: 25px; }
+
+.oxidacion { top: 6rem; right: -16rem; width: 210px; }
+.oxidacion::before { top: 10px; left: -40px; width: 40px; }
+
+.elemento-ej {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  background-color: #e5f69b;
+  border: 2px solid #000;
+  color: #000;
+  box-sizing: border-box;
+  padding: 6px;
+}
+
+.mass {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ionization {
+  position: absolute;
+  top: 28px;
+  left: 10px;
+  font-size: 13px;
+}
+
+.electronegativity {
+  position: absolute;
+  top: 45px;
+  left: 10px;
+  font-size: 13px;
+}
+
+.atomic-number-ej {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.symbol-ej {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.name-ej {
+  position: absolute;
+  top: 130px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+.config {
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  font-size: 14px;
+}
+
+.oxidation {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  font-size: 13px;
+}
+
+/* --- ETIQUETAS Y FLECHAS --- */
+.etiquetas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.linea {
+  position: absolute;
+  font-size: 13px;
+  background: #fff;
+  padding: 2px 4px;
+}
+
+.linea::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  background: #000;
+}
+
+.metaloidess{
+  border: #000 2px solid;
+  font-weight: bold;
+  background-color: #ff8c40;
+}
+.alcalinoss{
+  border: #000 2px solid;
+  font-weight: bold;
+  background-color: #9508fa;
+}
+.alcalinoterreoss{
+  border: #000 2px solid;
+  font-weight: bold;
+  background-color: #e6a459;
+  top: auto;
+
+}
+.lantanidoss{
+  border: #000 2px solid;
+  font-weight: bold;
+  background-color: #bda5d9;
+}
+.actinidoss{
+  border: #000 2px solid;
+  font-weight: bold;
+  background-color: #86d0f2;
+}
+.metalesdetransicionn{
+  border: #000 2px solid;
+  font-weight: bold;
+  background-color: #eadc3e;
+}
+.metalesdelbloquep{
+  border: #000 2px solid;
+  font-weight: bold;
+  background-color: green;
+}
+.halogenoss{
+  border: #000 2px solid;
+  font-weight: bold;
+  background-color: #9d1291;
+  color: white;
+}
+.otrosnometaless{
+  border: #000 2px solid;
+  font-weight: bold;
+  background-color: #04eeff;
+  color: white;
+}
+.gasesnobless{
+  border: #000 2px solid;
+  font-weight: bold;
+  background-color: #ff8cfd;
+}
+.tablasdecolores{
+  display: grid;
+  grid-template-columns: repeat(5, auto); /* 5 columnas, puedes ajustar */
+  gap: 6px 12px; /* espacio entre filas y columnas */
+  padding: 8px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
